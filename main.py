@@ -4,6 +4,7 @@ from discord.commands import Option
 import logging
 from typing import List
 import validators
+from urllib.parse import quote_plus
 
 import sys
 print(sys.version_info)
@@ -352,10 +353,6 @@ async def colour(ctx):
 
     # Sending a message containing our view
     await ctx.send("Pick your favourite colour:", view=view)
-
-
-from urllib.parse import quote_plus
-
 
 # Define a simple View that gives us a google link button.
 # We take in `query` as the query that the command author requests for
