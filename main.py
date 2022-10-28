@@ -20,11 +20,21 @@ import time
 from keep_alive import keep_alive
 from datetime import datetime, timedelta
 
+# import logging
+# logger = logging.getLogger('discord')
+# logger.setLevel(logging.DEBUG)
+# handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+# handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+# logger.addHandler(handler)
+
+from dotenv import load_dotenv
+load_dotenv()
+
 INSTANCE_ID = os.environ.get("INSTANCE_ID", "")
 REGION_NAME = os.environ.get("REGION_NAME", "")
+GUILD_ID = os.environ.get("GUILD_ID", "")
 
 TOKEN = os.environ.get("DISCORD_TOKEN", "")
-GUILD_ID = os.environ.get("GUILD_ID", "")
 ACCESS_KEY = os.environ.get("ACCESS_KEY", "")
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
