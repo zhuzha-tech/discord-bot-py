@@ -16,14 +16,19 @@ channel = "unstable"
 [interpreter]
   [interpreter.command]
   args = [
-    "stderred",
-    "--",
-    "prybar-python3",
-    "-q",
-    "--ps1",
-    "\u0001\u001b[33m\u0002\u0001\u001b[00m\u0002 ",
-    "-i",
-  ]
+      # "stderred",
+      # "--",
+      "python3",
+    ]
+  # args = [
+  #   "stderred",
+  #   "--",
+  #   "prybar-python3",
+  #   "-q",
+  #   "--ps1",
+  #   "\u0001\u001b[33m\u0002\u0001\u001b[00m\u0002 ",
+  #   "-i",
+  # ]
   env = { LD_LIBRARY_PATH = "$PYTHON_LD_LIBRARY_PATH" }
 
 [env]
@@ -86,9 +91,9 @@ ignoredPackages = ["unit_tests"]
   [packager.features]
   enabledForHosting = false
   # Enable searching packages from the sidebar.
-  packageSearch = true
+  packageSearch = false
   # Enable guessing what packages are needed from the code.
-  guessImports = true
+  guessImports = false
 
 # These are the files that need to be preserved when this 
 # language template is used as the base language template
