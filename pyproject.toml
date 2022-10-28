@@ -8,7 +8,7 @@ authors = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.10.0,<3.11"
+python = ">=3.10.0"
 Flask = "^2.1.2"
 boto3 = "^1.24.2"
 botocore = "^1.27.2"
