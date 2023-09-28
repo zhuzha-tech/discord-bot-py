@@ -1,10 +1,10 @@
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.241.1/containers/python-3/.devcontainer/base.Dockerfile
 
-ARG VARIANT="3.11-bullseye"
-FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
+ARG VARIANT="3.11-bookworm"
+FROM mcr.microsoft.com/devcontainers/python:1-${VARIANT}
 
 # Install poetry and use it to install requirements
-ARG POETRY_VERSION="1.2.2"
+ARG POETRY_VERSION="1.6.1"
 ENV PYTHONFAULTHANDLER=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONHASHSEED=random \
