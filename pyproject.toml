@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "discord-bot"
-version = "0.3.0"
+version = "0.4.0"
 description = ""
 authors = [
     "George Zhuzha <zhorazhuzha@gmail.com>",
@@ -8,18 +8,28 @@ authors = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.8.0,<4.0"
-replit = "^3.2.4"
-Flask = "^2.2.0"
-# urllib3 = "^1.26.12"
-boto3 = "^1.24.2"
-botocore = "^1.27.2"
-validators = "^0.20.0"
-py-cord = "^2.2.2"
+python = ">=3.10.0,<3.11"
+replit = "^3.3.2"
+Flask = "^2.3.3"
+urllib3 = "^1.26.15"
+boto3 = "^1.28.57"
+botocore = "^1.31.57"
+validators = "^0.22.0"
+py-cord = {extras = ["speed"], version = "^2.4.1"}
+python-dotenv = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
-debugpy = "^1.6.2"
-replit-python-lsp-server = {extras = ["yapf", "rope", "pyflakes"], version = "^1.5.9"}
+debugpy = "^1.8.0"
+replit-python-lsp-server = {extras = ["yapf", "rope", "pyflakes"], version = "^1.15.9"}
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/configuration/
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
